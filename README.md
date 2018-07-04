@@ -15,3 +15,5 @@ We aim to provide a generic starter seed for building a modern, universal app wi
 - Use one main programming language for all platforms - Typescript to the rescue
 
 ## Architectural Directions
+
+
