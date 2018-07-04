@@ -6,6 +6,9 @@ This project aims to be a well designed and maintained seed for a cosmic (native
 
 Spacemesh is building a galactic wallet. Team Spacemesh decided to support Cosmic with funded github issues and contribute the seed to the community under the permissive MIT license. Spacemesh will use Cosmic as the base for its universal wallet app.
 
+# why Cosmic?
+Because `universal` is taken and Cosmic is means universal, as of the cosmos :-)
+
 # What is this good for?
 Tl`dr - the world should have a well-maintained seed for cosmic apps.
 
@@ -22,7 +25,7 @@ We aim to provide a generic starter seed for building a modern, universal app wi
 - Use one main programming language for all platforms - Typescript to the rescue
 - Use only open source libraries and frameworks
 
-We hope that using the seed developers will be able to be more productive in building intergalactic apps as they can focus on their app logic and work using established patterns instead of having to write lots of boilerplate infrastructure code to support each runtime execution environment.
+We hope that using the seed developers will be able to be more productive in building cosmic apps as they can focus on their app logic and work using established patterns instead of having to write lots of boilerplate infrastructure code to support each runtime execution environment.
 
 ## Architectural Directions
 
