@@ -18,4 +18,6 @@ We aim to provide a generic starter seed for building a modern, universal app wi
 
 ## Architectural Directions
 
+tl'dr - Yes, we are opinionated, very opinionated.
+
 ![](https://raw.githubusercontent.com/spacemeshos/intergalactic/master/arch_figure.png)
