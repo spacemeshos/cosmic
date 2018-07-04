@@ -1,5 +1,7 @@
 # Overview and Motivation
-Universal apps are mobile / web apps. Intergalactic apps are mobile / web / desktop apps.
+Universal apps are apps which can run on mobile native or on the web inside a web browser. 
+Intergalactic appp is a mobile / web / desktop app - an app which can run in a web browser, on the desktop across all major dekstop platforms and on mobile native on iOS and Android. An intergalactic app shares all non presentation code between all platforms and ideally only has platform-specfic presentation code for few platform-optimized features. e.g. use Face ID for user authentication when running on iPhone X. But the core idea that 90%+ of presentation code - the UI and layout is shared between all supported runtime platform.
+
 This project aims to be a well designed and maintained seed for an intergalactic (native mobile, web, desktop) app based on react native web, redux and typescript.
 
 # What is this good for?
