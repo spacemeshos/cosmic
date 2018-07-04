@@ -16,4 +16,4 @@ We aim to provide a generic starter seed for building a modern, universal app wi
 
 ## Architectural Directions
 
-
+![](https://raw.githubusercontent.com/spacemeshos/intergalactic/master/arch_figure.png)
