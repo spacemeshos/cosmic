@@ -4,6 +4,8 @@ Intergalactic appp is a mobile / web / desktop app - an app which can run in a w
 
 This project aims to be a well designed and maintained seed for an intergalactic (native mobile, web, desktop) app based on react native web, redux and typescript.
 
+Spacemesh is building a galactic wallet. Team Spacemesh decided to support Intergalactic with funded github issues and contribute the seed to the community under the permissive MIT license. Spacemesh will use Intergalactic as the base for its universal wallet app.
+
 # What is this good for?
 There are several similar seeds out there, but non with the project scope and goals we have in mind.
 Have a well designed and maintained seed for intergalactic apps is useful for many kinds of applications across many verticals and can drastically reduce boilerplate code and encourages reuse of software components across different kind of packaging and execution environments.
