@@ -55,3 +55,6 @@ tl'dr - Yes, we are opinionated, very opinionated. We'd like to establish baseli
 
 ## Community
 - [Cosmic Dev Talk](https://gitter.im/spacemesh-os/cosmic) Gitter Channel
+- We are actively looking for contributors, collaborators and maintainers. Get in touch via Gitter.
+- Help wanted - Our Epic first Gitcoin funded issue: https://github.com/spacemeshos/cosmic/issues/2
+
