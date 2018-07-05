@@ -52,3 +52,6 @@ tl'dr - Yes, we are opinionated, very opinionated. We'd like to establish baseli
 - `Typescript` is the sorcery which allows developers to build and to test cosmic apps with knowledge of only one programming language. It provides some type safety and a modern syntax for Javascript - the language actually used at the runtime of cosmic apps. It is a good choice because it is the recommended language or it is at least well supported by all underling libraries and frameworks used to build cosmic apps such as `react-native`, `react-native-web`
 
 - TODO: add notes about tools, testings and config.
+
+## Community
+- ]Cosmic Dev Talk](https://gitter.im/spacemesh-os/cosmic) Gitter Channel
