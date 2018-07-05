@@ -54,4 +54,4 @@ tl'dr - Yes, we are opinionated, very opinionated. We'd like to establish baseli
 - TODO: add notes about tools, testings and config.
 
 ## Community
-- ]Cosmic Dev Talk](https://gitter.im/spacemesh-os/cosmic) Gitter Channel
+- [Cosmic Dev Talk](https://gitter.im/spacemesh-os/cosmic) Gitter Channel
