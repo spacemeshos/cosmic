@@ -1,3 +1,8 @@
+<h1 align="center">
+  <a href="https://spacemesh.io"><img width="400" src="https://spacemesh.io/content/images/2018/05/logo-black-on-white-trimmed.png" alt="Spacemesh logo" /></a>
+  <p align="center">Spacemesh Cosmic Seed</p>
+</h1>
+
 # Overview and Motivation
 Universal apps are apps which can run on mobile native or on the web inside a web browser.
 Cosmic app is a mobile / web / desktop app - an app which can run in a web browser, on the desktop across all major desktop platforms and on mobile native on iOS and Android. A cosmic app shares all non presentation code between all platforms and ideally only has platform-specific presentation code for few platform-optimized features. e.g. use FaceId for user authentication when running on iPhone X. But the core idea that 90%+ of presentation code - the UI and layout is shared between all supported runtime platform.
