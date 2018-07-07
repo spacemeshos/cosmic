@@ -9,7 +9,7 @@ Cosmic app is a mobile / web / desktop app - an app which can run in a web brows
 
 This project aims to be a well designed and maintained seed for a cosmic (native mobile, web, desktop) app based on react native web, redux and typescript.
 
-Team Spacemesh is building a galactic `Spacemesh App` as the client for [go-spacemesh](https://github.com/spacemeshos/go-spacemesh). Team Spacemesh decided to support Cosmic with funded github issues and contribute the seed to the community under the permissive MIT license. Spacemesh will use Cosmic as the base for its cosmic wallet app.
+Team Spacemesh is building a cosmic `Spacemesh App` as the first client for [go-spacemesh](https://github.com/spacemeshos/go-spacemesh). Team Spacemesh decided to support Cosmic with funded github issues and contribute the seed to the community under the permissive MIT license. Spacemesh will use Cosmic as the foundation for its cosmic wallet app.
 
 # why Cosmic?
 Because `universal` is taken and Cosmic means universal, as of the cosmos :-)
