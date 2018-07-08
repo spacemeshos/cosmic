@@ -36,7 +36,7 @@ We hope that using the seed developers will be able to be more productive in bui
 
 tl'dr - Yes, we are opinionated, very opinionated. We'd like to establish baselines patterns and libraries for cosmic apps. The following diagram outlines the concept:
 
-![](https://raw.githubusercontent.com/spacemeshos/cosmic/master/arch_figure.png)
+![](https://raw.githubusercontent.com/spacemeshos/cosmic/master/cosmic_arch.png)
 
 - `React Native Web` for all UI widgets and layout
 
