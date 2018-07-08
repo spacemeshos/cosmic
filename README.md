@@ -11,7 +11,7 @@ This project aims to be a well designed and maintained seed for a cosmic (native
 
 Team Spacemesh is building a cosmic `Spacemesh App` as the first client for [go-spacemesh](https://github.com/spacemeshos/go-spacemesh). Team Spacemesh decided to support Cosmic with funded github issues and contribute the seed to the community under the permissive MIT license. Spacemesh will use Cosmic as the foundation for its cosmic wallet app.
 
-# why Cosmic?
+# Why Cosmic?
 Because `universal` is taken and Cosmic means universal, as of the cosmos :-)
 
 # What is this good for?
