@@ -48,7 +48,7 @@ tl'dr - Yes, we are opinionated, very opinionated. We'd like to establish baseli
 
 - `Platform Services` are cross-platform components to deal with local resources such as secure storage, local db and local file system. They are implemented to support all runtime environment. e.g. desktop, native, web... They are used by `App Components` to implement app functionality.
 
-- `Assets Manager` - responsible for providing assets to app components and to UI components in a cross-platform manner and to abstract away differences between locally bundled vs cloud hosted assets. It is implemented using `local asset bundles` and `Static Assets Services`.
+- `Assets https service` - We'd like to share almost all static assets / resources between all runtime platforms by serving them over https. React native supports [https resources](https://facebook.github.io/react-native/docs/images.html). We may resort to bundling some assets for mobile native delivery based on profiling but this will be an exception to the rule.
 
 - `packaging` - an Cosmic app is packaged to the 4 currently supported platforms - Web, Desktop, iOS and Android. Packaging is implemented via tools and compile-time scripts. Desktop is supported via `Electron` packaging. Both Desktop and Web packaging include a `Node.js` app to serve the App screens. iOS and Android packaging is implemented using `React Native` packaging tools. Mobile native packaging supports `Assets Bundles` - bundling of static assets in the mobile native app packaged binary.
 
