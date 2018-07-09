@@ -1,4 +1,4 @@
-Cosmic Auhtors
+Cosmic Authors
 
 // Please add yourself as an author when submitting a PR
 
