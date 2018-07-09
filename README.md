@@ -1,13 +1,18 @@
+<h1 align="center">
+  <a href="https://spacemesh.io"><img width="400" src="https://spacemesh.io/content/images/2018/05/logo-black-on-white-trimmed.png" alt="Spacemesh logo" /></a>
+  <p align="center">Cosmic Apps Seed 🌱🌌</p>
+</h1>
+
 # Overview and Motivation
 Universal apps are apps which can run on mobile native or on the web inside a web browser.
 Cosmic app is a mobile / web / desktop app - an app which can run in a web browser, on the desktop across all major desktop platforms and on mobile native on iOS and Android. A cosmic app shares all non presentation code between all platforms and ideally only has platform-specific presentation code for few platform-optimized features. e.g. use FaceId for user authentication when running on iPhone X. But the core idea that 90%+ of presentation code - the UI and layout is shared between all supported runtime platform.
 
 This project aims to be a well designed and maintained seed for a cosmic (native mobile, web, desktop) app based on react native web, redux and typescript.
 
-Team Spacemesh is building a galactic `Spacemesh App` as the client for [go-spacemesh](https://github.com/spacemeshos/go-spacemesh). Team Spacemesh decided to support Cosmic with funded github issues and contribute the seed to the community under the permissive MIT license. Spacemesh will use Cosmic as the base for its cosmic wallet app.
+Team Spacemesh is building a cosmic `Spacemesh App` as the first client for [go-spacemesh](https://github.com/spacemeshos/go-spacemesh). Team Spacemesh decided to support Cosmic with funded github issues and contribute the seed to the community under the permissive MIT license. Spacemesh will use Cosmic as the foundation for its cosmic wallet app.
 
 # why Cosmic?
-Because `universal` is taken and Cosmic is means universal, as of the cosmos :-)
+Because `universal` is taken and Cosmic means universal, as of the cosmos :-)
 
 # What is this good for?
 Tl;dr - the world should have a well-maintained seed for cosmic apps.
