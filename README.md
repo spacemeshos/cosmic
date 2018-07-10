@@ -42,7 +42,7 @@ tl'dr - Yes, we are opinionated, very opinionated. We'd like to establish baseli
 
 - `Redux` for all app state management and data flow between app components and ui components
 
-- `React Router` for app navigation
+- `React Router` for app navigation. We would like to try using [react-native-router-flux](https://github.com/aksonov/react-native-router-flux)
 
 - `App Components` is where all shared application logic should be implemented. App components method are called based on app events (such as screen load or request for display data) via redux. App components are shared between all runtime environment and are basically `Javascript modules`
 
