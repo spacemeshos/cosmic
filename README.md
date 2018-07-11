@@ -3,6 +3,13 @@
   <p align="center">Cosmic Apps Seed 🌱🌌</p>
 </h1>
 
+<p align="center">
+<a href="https://gitcoin.co/profile/spacemeshos" title="Push Open Source Forward">
+    <img src="https://gitcoin.co/static/v2/images/promo_buttons/slice_02.png" width="267px" height="52px" alt="Browse Gitcoin Bounties"/>
+</a>
+</p>
+
+
 # Overview and Motivation
 Universal apps are apps which can run on mobile native or on the web inside a web browser.
 Cosmic app is a mobile / web / desktop app - an app which can run in a web browser, on the desktop across all major desktop platforms and on mobile native on iOS and Android. A cosmic app shares all non presentation code between all platforms and ideally only has platform-specific presentation code for few platform-optimized features. e.g. use FaceId for user authentication when running on iPhone X. But the core idea that 90%+ of presentation code - the UI and layout is shared between all supported runtime platform.
