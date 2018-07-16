@@ -1,22 +1,13 @@
 const electron = require("electron");
-const { app, BrowserWindow } = electron;
-// const { autoUpdater } = require("electron-updater");
+const { app, BrowserWindow, protocol } = electron;
 const isDev = require("electron-is-dev");
 const path = require("path");
-// require("dotenv").config();
-
-// const {
-// default: installExtension,
-// REACT_DEVELOPER_TOOLS
-// } = require("electron-devtools-installer");
 
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
 
 function createWindow() {
-  // Check for software updates
-  // autoUpdater.checkForUpdates();
 
   // Create the browser window.
   mainWindow = new BrowserWindow({
@@ -32,14 +23,11 @@ function createWindow() {
   mainWindow.loadURL(
     isDev
       ? "http://localhost:3000"
-      : `file://${path.join(__dirname, "../build/index.html")}`
+      : `file://${path.join(__dirname, "/../build/index.html")}`
   );
-  // mainWindow.webContents.openDevTools();
-
-  // React DevTools
-  // installExtension(REACT_DEVELOPER_TOOLS)
-  // .then(name => console.log(`Added Extension:  ${name}`))
-  // .catch(err => console.log("An error occurred: ", err));
+  if (isDev) {
+    mainWindow.webContents.openDevTools();
+  }
 
   mainWindow.once("ready-to-show", () => {
     mainWindow.show();
@@ -56,49 +44,20 @@ function createWindow() {
   });
 }
 
-app.on("ready", createWindow);
+app.on("ready", () => {
+  protocol.interceptFileProtocol('file', (request, callback) => {
+    const url = request.url.substr(7)
+    callback({
+      path: path.normalize(`${url}`)
+    })
+  }, (err) => {
+    if (err) console.log('Failed to register protocol');
+  });
+  createWindow();
+});
 
 app.on("activate", () => {
   if (mainWindow === null) {
     createWindow();
   }
 });
-
-//-------------------------------------------------------------------
-// Auto updates
-//-------------------------------------------------------------------
-// const sendStatusToWindow = text => {
-//   if (mainWindow) {
-//     mainWindow.webContents.send("auto-update", text);
-//   }
-// };
-
-// autoUpdater.on("checking-for-update", () => {
-//   sendStatusToWindow("Checking for update...");
-// });
-// autoUpdater.on("update-available", info => {
-//   sendStatusToWindow("Update available.");
-// });
-// autoUpdater.on("update-not-available", info => {
-//   sendStatusToWindow("Update not available.");
-// });
-// autoUpdater.on("error", err => {
-//   sendStatusToWindow(`Error in auto-updater: ${err.toString()}`);
-// });
-// autoUpdater.on("download-progress", progressObj => {
-//   sendStatusToWindow(
-//     `Download speed: ${progressObj.bytesPerSecond} - Downloaded ${
-//       progressObj.percent
-//     }% (${progressObj.transferred} + '/' + ${progressObj.total} + )`
-//   );
-// });
-// autoUpdater.on("update-downloaded", info => {
-//   sendStatusToWindow("Update downloaded; will install now");
-// });
-
-// autoUpdater.on("update-downloaded", info => {
-//   // Wait 5 seconds, then quit and install
-//   // In your application, you don't need to wait 500 ms.
-//   // You could call autoUpdater.quitAndInstall(); immediately
-//   autoUpdater.quitAndInstall();
-// });

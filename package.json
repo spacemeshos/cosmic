@@ -93,6 +93,7 @@
     "appId": "your.app.appId",
     "files": [
       "build/**/*",
+      "./public/electron.js",
       "node_modules/**/*",
       "!build-scripts${/*}"
     ],
@@ -110,6 +111,14 @@
         "zip",
         "dmg"
       ]
+    },
+    "linux": {
+      "maintainer": "your-email@email.com",
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "your-app-category"
     },
     "win": {
       "publisherName": "Spacemesh Cosmic",
@@ -139,5 +148,5 @@
   "bugs": {
     "url": "https://github.com/spacemeshos/cosmic/issues"
   },
-  "homepage": "https://github.com/spacemeshos/cosmic#readme"
+  "homepage": "./"
 }
