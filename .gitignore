@@ -4,6 +4,7 @@
 
 # Xcode
 #
+ios/
 build/
 *.pbxuser
 !default.pbxuser
@@ -24,7 +25,7 @@ project.xcworkspace
 
 # Android/IntelliJ
 #
-dist/
+android/
 build/
 .idea
 .gradle
