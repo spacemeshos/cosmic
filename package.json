@@ -2,16 +2,37 @@
   "name": "cosmic",
   "version": "0.0.1",
   "private": true,
+  "main": "./public/electron.js",
   "scripts": {
     "web": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "ios": "react-native run-ios",
     "android": "react-native run-android",
     "test": "jest --coverage",
+    "clean-all": "rm -rf ios; rm -rf android; rm -rf dist; rm -rf build;",
+    "rebuild": "rm -rf ios; rm -rf android; react-native upgrade; rm -f .babelrc; rm -f .buckconfig; rm -f .flowconfig; rm -f .watchmanconfig; rm -f .gitattributes; build; yarn bundle-android",
+    "bundle-android": "mkdir android/app/src/main/assets/; react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "bundle-ios": "react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios",
     "lint": "tslint -c tslint.json 'src/**/*.ts{,x}'",
-    "rebuild": "rm -rf ios; rm -rf android; react-native upgrade; rm -f .babelrc; rm -f .buckconfig; rm -f .flowconfig; rm -f .watchmanconfig; rm -f .gitattributes;"
+    "android-linux": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res && react-native run-android",
+    "electron-pack": "build electron-builder -mwl",
+    "win-pack": "build --em.main=build/electron.js --win",
+    "check-codesign": "codesign --verify --verbose --deep --strict dist/mac/Scribe.app",
+    "preelectron-pack": "yarn build",
+    "electron": "electron .",
+    "electron-dev": "concurrently \"BROWSER=none yarn web\" \"wait-on http://localhost:3000 && electron . --dev\"",
+    "dist": "yarn build && build",
+    "pack": "build --dir",
+    "postinstall": "install-app-deps"
   },
   "dependencies": {
+    "asar": "^0.14.3",
+    "dotenv": "^4.0.0",
+    "electron-context-menu": "^0.9.1",
+    "electron-installer-dmg": "^0.1.2",
+    "electron-is-dev": "^0.3.0",
+    "electron-packager": "^8.7.0",
+    "electron-remote": "^1.2.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-native": "0.55.4",
@@ -25,13 +46,20 @@
     "@types/react-test-renderer": "^16.0.1",
     "babel-jest": "23.0.1",
     "babel-preset-react-native": "4.0.0",
+    "concurrently": "^3.5.1",
+    "devtron": "^1.4.0",
+    "electron": "^2.0.4",
+    "electron-builder": "20.20.4",
+    "electron-devtools-installer": "^2.2.3",
+    "electron-icon-maker": "0.0.4",
     "jest": "23.1.0",
     "prettier": "^1.13.4",
     "react-art": "^16.4.0",
     "react-native-typescript-transformer": "^1.2.9",
     "react-test-renderer": "^16.4.0",
     "ts-jest": "^22.4.6",
-    "typescript": "^2.9.1"
+    "typescript": "^2.9.1",
+    "wait-on": "^2.0.2"
   },
   "babel": {
     "presets": [
@@ -60,10 +88,56 @@
     }
   },
   "description": "## install",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/spacemeshos/cosmic.git"
+  },
+  "build": {
+    "extends": null,
+    "appId": "your.app.appId",
+    "files": [
+      "build/**/*",
+      "./public/electron.js",
+      "node_modules/**/*",
+      "!build-scripts${/*}"
+    ],
+    "forceCodeSigning": true,
+    "directories": {
+      "buildResources": "assets"
+    },
+    "mac": {
+      "category": "your.app.category.type",
+      "publish": {
+        "provider": "github",
+        "owner": "Spacemesh Cosmic"
+      },
+      "target": [
+        "zip",
+        "dmg"
+      ]
+    },
+    "linux": {
+      "maintainer": "your-email@email.com",
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "your-app-category"
+    },
+    "win": {
+      "publisherName": "Spacemesh Cosmic",
+      "certificateFile": "./build-scripts/win-cert.pfx",
+      "certificatePassword": "",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    }
   },
   "keywords": [
     "Universal",
@@ -78,5 +152,5 @@
   "bugs": {
     "url": "https://github.com/spacemeshos/cosmic/issues"
   },
-  "homepage": "https://github.com/spacemeshos/cosmic#readme"
+  "homepage": "./"
 }
