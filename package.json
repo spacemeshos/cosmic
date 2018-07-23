@@ -7,6 +7,7 @@
     "lint": "tslint -c tslint.json 'src/**/*.ts{,x}'",
     "test": "jest --coverage",
     "clean-all": "rm -rf ios; rm -rf android; rm -rf dist; rm -rf build;",
+    "mobile": "react-native upgrade; yarn bundle-android;",
     "web": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "rebuild": "rm -rf ios; rm -rf android; react-native upgrade; yarn bundle-android; yarn dist",
