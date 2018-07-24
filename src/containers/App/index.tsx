@@ -1,9 +1,9 @@
 import * as React from "react";
-import Routing, { Router } from './utils/routing';
+import Routing, { Router } from '../../utils/routing';
 import { Provider } from 'react-redux';
-import store from './store'
-import SecondPage from './containers/SecondPage';
-import FirstPage from './containers/FirstPage';
+import store from '../../store'
+import SecondPage from '../SecondPage';
+import FirstPage from '../FirstPage';
 
 const { Route, Switch } = Routing;
 
