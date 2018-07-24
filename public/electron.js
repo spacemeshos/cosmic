@@ -34,9 +34,9 @@ function createWindow() {
   });
 
   // Prompt users before window close
-  // mainWindow.on("close", e => {
-  //   e.preventDefault();
-  // });
+  mainWindow.on("close", e => {
+    e.preventDefault();
+  });
 
   // Emitted when the window is closed.
   mainWindow.on("closed", () => {
