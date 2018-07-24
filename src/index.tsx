@@ -1,5 +1,5 @@
 // Application Starter
-import App from "./containers/App";
+import App from "./app";
 import { Platform, AppRegistry } from "react-native";
 
 // Register Application

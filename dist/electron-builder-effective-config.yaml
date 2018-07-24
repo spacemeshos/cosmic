@@ -1,0 +1,35 @@
+directories:
+  output: dist
+  buildResources: assets
+extends: null
+appId: your.app.appId
+files:
+  - build/**/*
+  - ./public/electron.js
+  - node_modules/**/*
+  - '!build-scripts${/*}'
+forceCodeSigning: true
+mac:
+  category: your.app.category.type
+  publish:
+    provider: github
+    owner: Spacemesh Cosmic
+  target:
+    - zip
+    - dmg
+linux:
+  maintainer: your-email@email.com
+  target:
+    - AppImage
+    - deb
+  category: your-app-category
+win:
+  publisherName: Spacemesh Cosmic
+  certificateFile: ./build-scripts/win-cert.pfx
+  certificatePassword: <stripped sensitive data>
+  target:
+    - target: nsis
+      arch:
+        - x64
+        - ia32
+electronVersion: 2.0.4
