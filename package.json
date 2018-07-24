@@ -116,6 +116,8 @@
       "buildResources": "assets"
     },
     "mac": {
+      "certificateFile": "./build-scripts/mac-cert.p12",
+      "author": "Your Name",
       "category": "your.app.category.type",
       "publish": {
         "provider": "github",
@@ -123,14 +125,18 @@
       },
       "target": [
         "zip",
-        "dmg"
+        "dmg",
+        "deb",
+        "x64"
       ]
     },
     "linux": {
       "maintainer": "your-email@email.com",
       "target": [
         "AppImage",
-        "deb"
+        "dmg",
+        "deb",
+        "x64"
       ],
       "category": "your-app-category"
     },
@@ -143,7 +149,10 @@
           "target": "nsis",
           "arch": [
             "x64",
-            "ia32"
+            "ia32",
+            "deb",
+            "AppImage",
+            "dmg"
           ]
         }
       ]
