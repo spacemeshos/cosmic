@@ -116,8 +116,6 @@
       "buildResources": "assets"
     },
     "mac": {
-      "certificateFile": "./build-scripts/mac-cert.p12",
-      "author": "Your Name",
       "category": "your.app.category.type",
       "publish": {
         "provider": "github",
