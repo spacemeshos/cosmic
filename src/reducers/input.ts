@@ -11,6 +11,11 @@ export const initialState: IState = {
     }
 }
 
+/**
+ * @description input reducer
+ * @param {IState} state
+ * @param {action} action
+ */
 export function reducer(state: IState = initialState, action: Action) {
     switch(action.type){
         case ActionTypes.ADD_ITEM: {

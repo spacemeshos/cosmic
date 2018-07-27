@@ -41,7 +41,7 @@ interface IState {
   input: InputModel,
 }
 
-class FirstPage extends React.Component<IProps, IState> {
+class SecondPage extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
   }
@@ -60,4 +60,4 @@ class FirstPage extends React.Component<IProps, IState> {
   }
 }
 
-export default FirstPage;
+export default SecondPage;
