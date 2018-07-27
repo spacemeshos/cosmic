@@ -18,5 +18,5 @@
     "skipLibCheck": true
   },
   "include": ["src/**/*"],
-  "exclude": ["coverage", "node_modules"]
+  "exclude": ["coverage", "node_modules", "src/*/*/*.spec.tsx"]
 }
