@@ -33,6 +33,7 @@
     "react-native": "0.55.4",
     "react-native-web": "^0.8.3",
     "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
     "react-router-native": "^4.3.0",
     "react-scripts-ts": "^2.16.0",
