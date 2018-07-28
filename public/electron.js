@@ -26,7 +26,7 @@ function createWindow() {
       : `file://${path.join(__dirname, "/../build/index.html")}`
   );
   if (isDev) {
-  mainWindow.webContents.openDevTools();
+    mainWindow.webContents.openDevTools();
   }
 
   mainWindow.once("ready-to-show", () => {
@@ -35,7 +35,7 @@ function createWindow() {
 
   // Prompt users before window close
   mainWindow.on("close", e => {
-    e.preventDefault();
+    // e.preventDefault();
   });
 
   // Emitted when the window is closed.
