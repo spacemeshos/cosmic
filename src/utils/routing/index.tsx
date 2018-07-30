@@ -1,7 +1,10 @@
 import * as Routing from 'react-router-dom';
 export default Routing;
+
 const userAgent = navigator.userAgent.toLowerCase();
-let route = null;
+
+let route: any = null;
+
 if (userAgent.indexOf(' electron/') > -1) {
    // Electron hash router
     route = Routing.HashRouter; 
