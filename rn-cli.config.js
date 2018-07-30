@@ -8,7 +8,6 @@ module.exports = {
     return ["ts", "tsx"];
   },
   getBlacklistRE: function() {
-  console.log(blacklist([/dist\/mac\/.*/]));
     return blacklist([/dist\/mac\/.*/, "dist/mac/*"]);
   }
 };
