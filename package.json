@@ -39,6 +39,7 @@
     "react-router-native": "^4.3.0",
     "react-scripts-ts": "^2.16.0",
     "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
     "reselect": "^3.0.1"
   },
   "devDependencies": {
@@ -69,7 +70,6 @@
     "react-art": "^16.4.0",
     "react-native-typescript-transformer": "^1.2.9",
     "react-test-renderer": "^16.4.0",
-    "redux-logger": "^3.0.6",
     "ts-jest": "^22.4.6",
     "typescript": "^2.9.1",
     "wait-on": "^2.0.2"
@@ -85,6 +85,12 @@
       "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
       "^.+\\.tsx?$": "ts-jest"
     },
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist/*"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/*"
+    ],
     "transformIgnorePatterns": [
       "node_modules/(?!react-native|react-router-native)/"
     ],
