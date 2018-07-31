@@ -73,8 +73,6 @@ tl'dr - Yes, we are opinionated, very opinionated. We'd like to establish baseli
 2. Make sure you have JAVA_HOME env var set to the Java 8 JDK as well as your ANDROID_HOME 
 ```
 e.g: export JAVA_HOME=<path-to-your-jdk>/<jdk>/Contents/Home
-```
-```
 export ANDROID_HOME=<path-to-your-android-sdk>
 export PATH=${PATH}:${ANDROID_HOME}/tools
 export PATH=${PATH}:${ANDROID_HOME}/platform-tools
