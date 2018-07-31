@@ -49,4 +49,15 @@ git clone https://github.com/spacemeshos/cosmic.git
 
 ### Known issues
 1. The name react-native was looked up in the Haste module map.
-	- Remove the haste-map-... files from your temp file and rebuild.		``` rm -rf /tmp/haste-map-*```
+	
+	- Remove the haste-map-... files from your temp file and rebuild:		
+	``` rm -rf /tmp/haste-map-*```
+	or
+	```
+	yarn cache clean
+	watchman watch-del-all
+	rm -rf $TMPDIR/metro-bundler-cache-*
+	rm -rf $TMPDIR/metro-cache-*
+	rm -rf $TMPDIR/react-native-packager-cache-*
+	rm -rf $TMPDIR/haste-map-metro-*
+	```
