@@ -1,0 +1,180 @@
+{
+  "name": "cosmic",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./public/electron.js",
+  "scripts": {
+    "lint": "tslint -c tslint.json 'src/**/*.ts{,x}'",
+    "test": "jest --coverage",
+    "clean-all": "rm -rf ios; rm -rf android; rm -rf dist; rm -rf build;",
+    "mobile": "react-native upgrade; yarn bundle-android;",
+    "web": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "rebuild": "rm -rf ios; rm -rf android; react-native upgrade; yarn bundle-android; yarn dist",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "bundle-android": "mkdir android/app/src/main/assets/; react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "bundle-ios": "react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios",
+    "electron-pack": "build electron-builder -mwl",
+    "win-pack": "build --em.main=build/electron.js --win",
+    "check-codesign": "codesign --verify --verbose --deep --strict dist/mac/Scribe.app",
+    "electron-dev": "concurrently \"BROWSER=none yarn web\" \"wait-on http://localhost:3000 && electron . --dev\"",
+    "dist": "yarn build && build",
+    "pack": "build --dir",
+    "postinstall": "install-app-deps"
+  },
+  "dependencies": {
+    "asar": "^0.14.3",
+    "dotenv": "^4.0.0",
+    "electron-is-dev": "^0.3.0",
+    "electron-packager": "^8.7.0",
+    "eslint": "^4.0.0",
+    "react": "16.3.1",
+    "react-dom": "^16.4.0",
+    "react-native": "0.55.4",
+    "react-native-web": "^0.8.3",
+    "react-redux": "^5.0.7",
+    "react-router": "^4.3.1",
+    "react-router-dom": "^4.3.1",
+    "react-router-native": "^4.3.0",
+    "react-scripts-ts": "^2.16.0",
+    "redux": "^4.0.0",
+    "redux-logger": "^3.0.6",
+    "reselect": "^3.0.1"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.1.12",
+    "@types/jest": "^23.0.0",
+    "@types/react": "^16.3.17",
+    "@types/react-native": "^0.55.17",
+    "@types/react-redux": "^6.0.4",
+    "@types/react-router-dom": "^4.3.0",
+    "@types/react-router-native": "^4.2.3",
+    "@types/react-test-renderer": "^16.0.1",
+    "@types/redux-logger": "^3.0.6",
+    "babel-core": "^6.0.0",
+    "babel-jest": "23.0.1",
+    "babel-preset-react-native": "4.0.0",
+    "babel-runtime": "^6.23.0",
+    "concurrently": "^3.5.1",
+    "devtron": "^1.4.0",
+    "electron": "^2.0.4",
+    "electron-builder": "20.20.4",
+    "electron-devtools-installer": "^2.2.3",
+    "electron-icon-maker": "0.0.4",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "jest": "23.1.0",
+    "node-gyp": "^3.7.0",
+    "prettier": "^1.13.4",
+    "react-art": "^16.4.0",
+    "react-native-typescript-transformer": "^1.2.9",
+    "react-test-renderer": "^16.4.0",
+    "ts-jest": "^22.4.6",
+    "typescript": "^2.9.1",
+    "wait-on": "^2.0.2"
+  },
+  "babel": {
+    "presets": [
+      "react-native"
+    ]
+  },
+  "jest": {
+    "preset": "react-native",
+    "transform": {
+      "^.+\\.jsx?$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "modulePathIgnorePatterns": [
+      "<rootDir>/dist/*"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/*"
+    ],
+    "transformIgnorePatterns": [
+      "node_modules/(?!react-native|react-router-native)/"
+    ],
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(jsx?|tsx?)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx",
+      "json",
+      "node"
+    ],
+    "globals": {
+      "ts-jest": {
+        "useBabelrc": true
+      }
+    },
+    "setupTestFrameworkScriptFile": "./setupTests.js"
+  },
+  "description": "## install",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/spacemeshos/cosmic.git"
+  },
+  "build": {
+    "extends": null,
+    "appId": "your.app.appId",
+    "files": [
+      "build/**/*",
+      "./public/electron.js",
+      "node_modules/**/*",
+      "!build-scripts${/*}"
+    ],
+    "forceCodeSigning": false,
+    "directories": {
+      "buildResources": "assets"
+    },
+    "mac": {
+      "category": "your.app.category.type",
+      "publish": {
+        "provider": "github",
+        "owner": "Spacemesh Cosmic"
+      },
+      "target": [
+        "zip",
+        "dmg"
+      ]
+    },
+    "linux": {
+      "maintainer": "your-email@email.com",
+      "target": [
+        "AppImage",
+        "deb",
+        "zip"
+      ],
+      "category": "your-app-category"
+    },
+    "win": {
+      "publisherName": "Spacemesh Cosmic",
+      "certificateFile": "./build-scripts/win-cert.pfx",
+      "certificatePassword": "",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64",
+            "ia32"
+          ]
+        }
+      ]
+    }
+  },
+  "keywords": [
+    "Universal",
+    "Apps",
+    "Seed",
+    "app",
+    "cosmic",
+    "spacemeshos"
+  ],
+  "author": "Spacemesh Cosmic Authors",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/spacemeshos/cosmic/issues"
+  },
+  "homepage": "https://github.com/spacemeshos"
+}
