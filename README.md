@@ -106,9 +106,9 @@ git clone https://github.com/spacemeshos/cosmic.git
 - For desktop
 ```yarn dist```
 
-### Known issues
-1. The name react-native was looked up in the Haste module map.
-	- Remove the haste-map-... files from your temp file and rebuild.		``` rm -rf /tmp/haste-map-*```
+### Additional commands
+- For bundling android
+```yarn bundle-android```
 
 ### Tests
 This seed uses jest for unit testing and calabash-android for android automation testing.
@@ -122,8 +122,25 @@ This seed uses jest for unit testing and calabash-android for android automation
 	`yarn test`
 
 
+### Known issues
+1. The name react-native was looked up in the Haste module map.
+	- Remove the haste-map-... files from your tmp file and rebuild.		
 
-### Community
+For Linux  
+  ``` rm -rf /tmp/haste-map-*```
+
+For OSX
+  ```
+  yarn cache clean
+  watchman watch-del-all
+  rm -rf $TMPDIR/metro-bundler-cache-*
+  rm -rf $TMPDIR/metro-cache-*
+  rm -rf $TMPDIR/react-native-packager-cache-*
+  rm -rf $TMPDIR/haste-map-metro-*
+  ```
+
+
+## Community
 - [Cosmic Dev Talk](https://gitter.im/spacemesh-os/cosmic) Gitter Channel
 - We are actively looking for contributors, collaborators and maintainers. Get in touch via Gitter.
 - Help wanted - Our Epic first Gitcoin funded issue: https://github.com/spacemeshos/cosmic/issues/2
