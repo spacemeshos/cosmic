@@ -114,7 +114,7 @@ git clone https://github.com/spacemeshos/cosmic.git
 This seed uses jest for unit testing and calabash-android for android automation testing.
 
 ### Calabash Android
-	-	To use this test you need (ruby)[https://rubyonrails.org] installed.
+-	To use this test you need (ruby)[https://rubyonrails.org] installed.
 		1. Run bundle install
 		2. bundle exec calabash-android run /path/to/android/apk/file
 
@@ -127,17 +127,19 @@ This seed uses jest for unit testing and calabash-android for android automation
 	- Remove the haste-map-... files from your tmp file and rebuild.		
 
 For Linux  
-  ``` rm -rf /tmp/haste-map-*```
+```
+  rm -rf /tmp/haste-map-*
+```
 
 For OSX
-  ```
-  yarn cache clean
-  watchman watch-del-all
-  rm -rf $TMPDIR/metro-bundler-cache-*
-  rm -rf $TMPDIR/metro-cache-*
-  rm -rf $TMPDIR/react-native-packager-cache-*
-  rm -rf $TMPDIR/haste-map-metro-*
-  ```
+```
+    yarn cache clean
+    watchman watch-del-all
+    rm -rf $TMPDIR/metro-bundler-cache-*
+    rm -rf $TMPDIR/metro-cache-*
+    rm -rf $TMPDIR/react-native-packager-cache-*
+    rm -rf $TMPDIR/haste-map-metro-*
+```
 
 
 ## Community
