@@ -65,7 +65,65 @@ tl'dr - Yes, we are opinionated, very opinionated. We'd like to establish baseli
 
 - TODO: add notes about tools, testings and config.
 
-## Community
+
+## Setup
+
+1. Follow the instructions here for building and testing for android on your dev platform: https://facebook.github.io/react-native/docs/getting-started.html
+
+2. Make sure you have JAVA_HOME env var set to the Java 8 JDK as well as your ANDROID_HOME 
+```
+e.g: export JAVA_HOME=<path-to-your-jdk>/<jdk>/Contents/Home
+```
+```
+export ANDROID_HOME=<path-to-your-android-sdk>
+export PATH=${PATH}:${ANDROID_HOME}/tools
+export PATH=${PATH}:${ANDROID_HOME}/platform-tools
+```
+4. Run the emulator with an Android 6 (+google play) device.
+5. Update `build-scripts/local.properties` with the right path to your android sdk.
+```
+git clone https://github.com/spacemeshos/cosmic.git
+```
+
+### Install dependencies
+```yarn install```
+
+### Development builds
+- For web
+``` yarn web ```
+- For android
+```yarn android```
+- For ios
+```yarn ios```
+- For electron
+```yarn electron-dev```
+
+### Platform builds (Production builds)
+- For Android and iOS
+```yarn mobile```
+- For Web
+```yarn build```
+- For desktop
+```yarn dist```
+
+### Known issues
+1. The name react-native was looked up in the Haste module map.
+	- Remove the haste-map-... files from your temp file and rebuild.		``` rm -rf /tmp/haste-map-*```
+
+### Tests
+This seed uses jest for unit testing and calabash-android for android automation testing.
+
+### Calabash Android
+	-	To use this test you need (ruby)[https://rubyonrails.org] installed.
+		1. Run bundle install
+		2. bundle exec calabash-android run /path/to/android/apk/file
+
+### Unit tests
+	`yarn test`
+
+
+
+### Community
 - [Cosmic Dev Talk](https://gitter.im/spacemesh-os/cosmic) Gitter Channel
 - We are actively looking for contributors, collaborators and maintainers. Get in touch via Gitter.
 - Help wanted - Our Epic first Gitcoin funded issue: https://github.com/spacemeshos/cosmic/issues/2
