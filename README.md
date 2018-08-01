@@ -109,6 +109,9 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 - For bundling android
 ```yarn bundle-android```
 
+- To build for mac, windows and linux using one command
+```yarn electron-pack```
+
 ### Tests
 This seed uses jest for unit testing and calabash-android for android automation testing.
 
