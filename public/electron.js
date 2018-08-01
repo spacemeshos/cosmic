@@ -25,9 +25,9 @@ function createWindow() {
       ? "http://localhost:3000"
       : `file://${path.join(__dirname, "/../build/index.html")}`
   );
-  if (isDev) {
+  // if (isDev) {
     mainWindow.webContents.openDevTools();
-  }
+  // }
 
   mainWindow.once("ready-to-show", () => {
     mainWindow.show();

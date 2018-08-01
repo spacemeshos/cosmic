@@ -18,13 +18,16 @@
     "electron-dev": "concurrently \"cross-env BROWSER=none yarn web\" \"wait-on http://localhost:3000 && electron . --dev\"",
     "dist": "yarn build && build",
     "pack": "build --dir",
+    "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --asar=true --prune=true --out=release-builds",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --asar=true --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --asar=true --prune=true --out=release-builds",
     "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
     "asar": "^0.14.3",
     "dotenv": "^4.0.0",
     "electron-is-dev": "^0.3.0",
-    "electron-packager": "^8.7.0",
+    "electron-packager": "^12.1.0",
     "eslint": "^4.0.0",
     "react": "16.3.1",
     "react-dom": "^16.4.0",
@@ -54,6 +57,7 @@
     "babel-preset-react-native": "4.0.0",
     "babel-runtime": "^6.23.0",
     "concurrently": "^3.5.1",
+    "cross-env": "^5.2.0",
     "devtron": "^1.4.0",
     "electron": "^2.0.4",
     "electron-builder": "20.20.4",
@@ -67,7 +71,6 @@
     "react-art": "^16.4.0",
     "react-native-typescript-transformer": "^1.2.9",
     "react-test-renderer": "^16.4.0",
-    "cross-env": "^5.2.0",
     "ts-jest": "^22.4.6",
     "typescript": "^2.9.1",
     "wait-on": "^2.0.2"
@@ -124,7 +127,8 @@
     ],
     "forceCodeSigning": false,
     "directories": {
-      "buildResources": "assets"
+      "buildResources": "assets",
+      "output": "desktop"
     },
     "mac": {
       "category": "your.app.category.type",
@@ -174,5 +178,5 @@
   "bugs": {
     "url": "https://github.com/spacemeshos/cosmic/issues"
   },
-  "homepage": "https://github.com/spacemeshos"
+  "homepage": "./"
 }
