@@ -116,9 +116,9 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 This seed uses jest for unit testing and calabash-android for android automation testing.
 
 ### Calabash Android
--	To use this test you need (ruby)[https://rubyonrails.org] installed.
-  1. Run bundle install
-  2. bundle exec calabash-android run /path/to/android/apk/file
+-	To use this test you need (ruby)[https://www.ruby-lang.org/en/documentation/installation/] installed.
+  1. Run ```bundle install```
+  2. Run ```bundle exec calabash-android run /path/to/android/apk/file```
 
 ### Unit tests
 	`yarn test`
