@@ -14,14 +14,11 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "bundle-android": "mkdir android/app/src/main/assets/; react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
-    "bundle-ios": "react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios",
     "electron-pack": "build electron-builder -mwl",
-    "win-pack": "build --em.main=build/electron.js --win",
-    "check-codesign": "codesign --verify --verbose --deep --strict dist/mac/Scribe.app",
-    "electron-dev": "concurrently \"BROWSER=none yarn web\" \"wait-on http://localhost:3000 && electron . --dev\"",
+    "electron-dev": "concurrently \"cross-env BROWSER=none yarn web\" \"wait-on http://localhost:3000 && electron . --dev\"",
     "dist": "yarn build && build",
     "pack": "build --dir",
-    "postinstall": "install-app-deps"
+    "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
     "asar": "^0.14.3",
@@ -70,6 +67,7 @@
     "react-art": "^16.4.0",
     "react-native-typescript-transformer": "^1.2.9",
     "react-test-renderer": "^16.4.0",
+    "cross-env": "^5.2.0",
     "ts-jest": "^22.4.6",
     "typescript": "^2.9.1",
     "wait-on": "^2.0.2"
