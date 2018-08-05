@@ -1,8 +1,8 @@
-const electron = require("electron");
-const { app, BrowserWindow, protocol } = electron;
+const { app, BrowserWindow, protocol } = require("electron");
 const isDev = require("electron-is-dev");
 const path = require("path");
 
+require('electron-debug')();
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow;
@@ -16,18 +16,22 @@ function createWindow() {
     height: 800,
     icon: path.join(__dirname, "../public/icons/png/64x64.png"),
     webPreferences: {
-      webSecurity: false
+      webSecurity: true
     },
     show: false
   });
-  mainWindow.loadURL(
-    isDev
-      ? "http://localhost:3000"
-      : `file://${path.join(__dirname, "/../build/index.html")}`
-  );
-  // if (isDev) {
+
+  let url = require('url').format({
+    protocol: 'file',
+    slashes: true,
+    pathname: require('path').join(__dirname, '/../build/index.html')
+  });
+  
+  mainWindow.loadURL((isDev) ? 'http://localhost:3000' : url);
+
+  if (isDev) {
     mainWindow.webContents.openDevTools();
-  // }
+  }
 
   mainWindow.once("ready-to-show", () => {
     mainWindow.show();

@@ -26,6 +26,7 @@
   "dependencies": {
     "asar": "^0.14.3",
     "dotenv": "^4.0.0",
+    "electron-debug": "^2.0.0",
     "electron-is-dev": "^0.3.0",
     "electron-packager": "^12.1.0",
     "eslint": "^4.0.0",
@@ -120,38 +121,35 @@
     "extends": null,
     "appId": "your.app.appId",
     "files": [
-      "build/**/*",
-      "./public/electron.js",
-      "node_modules/**/*",
-      "!build-scripts${/*}"
+      "*.js",
+      "build",
+      "public",
+      "node_modules"
     ],
     "forceCodeSigning": false,
     "directories": {
-      "buildResources": "assets",
-      "output": "desktop"
+      "buildResources": "build",
+      "output": "release-builds"
     },
     "mac": {
       "category": "your.app.category.type",
       "publish": {
         "provider": "github",
-        "owner": "Spacemesh Cosmic"
+        "owner": "Your Publisher Name"
       },
       "target": [
-        "zip",
         "dmg"
       ]
     },
     "linux": {
       "maintainer": "your-email@email.com",
       "target": [
-        "AppImage",
-        "deb",
-        "zip"
+        "deb"
       ],
       "category": "your-app-category"
     },
     "win": {
-      "publisherName": "Spacemesh Cosmic",
+      "publisherName": "Your Publisher Name",
       "certificateFile": "./build-scripts/win-cert.pfx",
       "certificatePassword": "",
       "target": [
