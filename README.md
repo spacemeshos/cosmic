@@ -193,8 +193,8 @@ This seed uses jest for unit testing and calabash-android for android automation
 
 - To use this test you need [ruby](https://rubyonrails.org) installed.
 
-1. Run bundle install
-2. bundle exec calabash-android run /path/to/android/apk/file
+1. Run ```bundle install```
+2. Run ```bundle exec calabash-android run /path/to/android/apk/file```
 
   
 
