@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "tslint -c tslint.json 'src/**/*.ts{,x}'",
     "test": "jest --coverage",
-    "clean-all": "rm -rf ios; rm -rf android; rm -rf dist; rm -rf build;",
+    "clean-all": "rm -rf ios; rm -rf android; rm -rf release-builds; rm -rf build;",
     "mobile": "react-native upgrade; yarn bundle-android;",
     "web": "react-scripts-ts start",
     "build": "react-scripts-ts build",
@@ -17,10 +17,6 @@
     "electron-pack": "build electron-builder -mwl",
     "electron-dev": "concurrently \"cross-env BROWSER=none yarn web\" \"wait-on http://localhost:3000 && electron . --dev\"",
     "dist": "yarn build && build",
-    "pack": "build --dir",
-    "package-linux": "electron-packager . --overwrite --platform=linux --arch=x64 --asar=true --prune=true --out=release-builds",
-    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --asar=true --prune=true --out=release-builds",
-    "package-win": "electron-packager . --overwrite --platform=win32 --arch=ia32 --asar=true --prune=true --out=release-builds",
     "postinstall": "electron-builder install-app-deps"
   },
   "dependencies": {
@@ -28,7 +24,6 @@
     "dotenv": "^4.0.0",
     "electron-debug": "^2.0.0",
     "electron-is-dev": "^0.3.0",
-    "electron-packager": "^12.1.0",
     "eslint": "^4.0.0",
     "react": "16.3.1",
     "react-dom": "^16.4.0",
