@@ -235,7 +235,6 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 ``` yarn clean-all```
 	- Run to generate android and ios builds
 ``` yarn mobile```
-	- To serve android, you need to add local.properties to the root directory with the path to your android sdk
 	- Serve app
 ```yarn android``` to serve android
 ```yarn ios``` to serve ios
@@ -246,10 +245,6 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 - For mobile ```yarn mobile```
 - For Web ```yarn build```
 - For desktop ```yarn dist```
-
-### Note
-For the android app to work well, you need to add local.properties to the root directory of the android directory.
-> local.properties contains the sdk path to your android sdk.
 
 ### Additional commands
 - For bundling android
@@ -281,16 +276,14 @@ rm -rf $TMPDIR/metro-cache-*
 rm -rf $TMPDIR/react-native-packager-cache-*
 rm -rf $TMPDIR/haste-map-metro-*
 ```
+2. What went wrong:
+A problem occurred evaluating project ':app'.  
+> SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable.
+
+[See here](https://stackoverflow.com/a/43626724/3391606)
+
 ## Community
-
-  
-
 -  [Cosmic Dev Talk](https://gitter.im/spacemesh-os/cosmic) Gitter Channel
 
-  
-
 - We are actively looking for contributors, collaborators and maintainers. Get in touch via Gitter.
-
-  
-
 - Help wanted - Our Epic first Gitcoin funded issue: https://github.com/spacemeshos/cosmic/issues/2
