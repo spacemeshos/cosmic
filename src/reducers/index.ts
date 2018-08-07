@@ -8,7 +8,7 @@ export interface IState {
 export const initialState: IState = {
     input: fromInput.initialState
 }
-
+// create reducer for all reducers
 export const reducer = combineReducers<IState>({
     input: fromInput.reducer
 })

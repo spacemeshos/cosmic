@@ -1,4 +1,5 @@
 /**
+ * InputModel
  * @description input model 
  */
 export interface InputModel {

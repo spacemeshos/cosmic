@@ -7,6 +7,7 @@ import Routing from '../../utils/routing';
 
 const { Link } = Routing;
 
+// styles
 const styles = StyleSheet.create({
   root: {
     display: "flex",
@@ -31,6 +32,7 @@ const styles = StyleSheet.create({
   }
 });
 
+// create props interface
 export interface IProps {
   input: InputModel ,
   onClicked: (text: string) => void,
@@ -45,6 +47,7 @@ class FirstPage extends React.Component<IProps, IState> {
     super(props);
   }
 
+  // Render page
   public render() {
     return (
       <View style={styles.root}>

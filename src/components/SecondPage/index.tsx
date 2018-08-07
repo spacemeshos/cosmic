@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
   }
 });
 
+// create props interface
 export interface IProps {
   input: InputModel ,
   onClicked: (text: string) => void,
@@ -46,6 +47,7 @@ class SecondPage extends React.Component<IProps, IState> {
     super(props);
   }
 
+  // Render page
   public render() {
     return (
       <View style={styles.root}>

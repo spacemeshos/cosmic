@@ -1,3 +1,5 @@
+// it is important to import the react package before anything else
+
 import * as React from "react";
 import Routing, { Router } from '../../utils/routing';
 import { Provider } from 'react-redux';
