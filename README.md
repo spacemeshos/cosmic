@@ -97,18 +97,23 @@ export PATH=${PATH}:${ANDROID_HOME}/platform-tools
 
 #### Mobile
 Remove all build directories (optional):
+
 ``` yarn clean-all```
 
 Generate android and ios builds:
+
 ``` yarn mobile```
 
 Serve App on Android Emulator:
+
 ```yarn android```
 
 Serve App on iOS Simulator:
+
 ```yarn ios```
 
 Start and Electron dev app session:
+
 ```yarn electron-dev```  
 
 ### Production builds
