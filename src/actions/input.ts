@@ -7,6 +7,11 @@ export enum ActionTypes {
 
 export interface IAddItemAction {type: ActionTypes.ADD_ITEM, payload: {input: InputModel}}
 
+/**
+ * Add Item Action
+ * @param {string} text
+ * @returns Object
+ */
 export function addItem(text: string): IAddItemAction {
     return {
         type: ActionTypes.ADD_ITEM,

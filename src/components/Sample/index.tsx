@@ -1,6 +1,6 @@
 import * as React from "react";
 import { Button, StyleSheet, View, TextInput } from "react-native";
-
+// create css for this page
 const styles = StyleSheet.create({
   root: {
     alignItems: "center",
@@ -39,17 +39,29 @@ class Sample extends React.Component<IProps, IState> {
     };
   }
 
+  /**
+   * onClick
+   * 
+   * @description handles click event
+   */
   public onClick(){
     const {onClick} = this.props;
     onClick(this.state.input)
   }
 
+  /**
+   * setText
+   * 
+   * @description updates state with text input value
+   * @param {String} text
+   */
   public setText(text: string){
     this.setState({
       input: text
     })
   }
 
+  // Render page
   public render() {
     return (
       <View style={styles.root}>
