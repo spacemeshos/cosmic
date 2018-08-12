@@ -1,0 +1,299 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SecondPage should match a snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Sample />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <TextInput
+          allowFontScaling={true}
+          onChangeText={[Function]}
+          placeholder="Enter text to display below"
+          style={
+            Object {
+              "borderColor": "gray",
+              "borderWidth": 1,
+              "height": 40,
+              "marginTop": 20,
+              "padding": 10,
+              "width": 300,
+            }
+          }
+          value=""
+        />,
+        <Component
+          style={
+            Object {
+              "flexDirection": "row",
+            }
+          }
+        >
+          <Component
+            style={
+              Object {
+                "flex": 1,
+                "marginTop": 20,
+                "paddingVertical": 0,
+              }
+            }
+          >
+            <Button
+              accessibilityLabel="submit"
+              onPress={[Function]}
+              title="Submit"
+            />
+          </Component>
+        </Component>,
+      ],
+      "style": Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "allowFontScaling": true,
+          "onChangeText": [Function],
+          "placeholder": "Enter text to display below",
+          "style": Object {
+            "borderColor": "gray",
+            "borderWidth": 1,
+            "height": 40,
+            "marginTop": 20,
+            "padding": 10,
+            "width": 300,
+          },
+          "value": "",
+        },
+        "ref": null,
+        "rendered": null,
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <Component
+            style={
+              Object {
+                "flex": 1,
+                "marginTop": 20,
+                "paddingVertical": 0,
+              }
+            }
+          >
+            <Button
+              accessibilityLabel="submit"
+              onPress={[Function]}
+              title="Submit"
+            />
+          </Component>,
+          "style": Object {
+            "flexDirection": "row",
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Button
+              accessibilityLabel="submit"
+              onPress={[Function]}
+              title="Submit"
+            />,
+            "style": Object {
+              "flex": 1,
+              "marginTop": 20,
+              "paddingVertical": 0,
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessibilityLabel": "submit",
+              "onPress": [Function],
+              "title": "Submit",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <TextInput
+            allowFontScaling={true}
+            onChangeText={[Function]}
+            placeholder="Enter text to display below"
+            style={
+              Object {
+                "borderColor": "gray",
+                "borderWidth": 1,
+                "height": 40,
+                "marginTop": 20,
+                "padding": 10,
+                "width": 300,
+              }
+            }
+            value=""
+          />,
+          <Component
+            style={
+              Object {
+                "flexDirection": "row",
+              }
+            }
+          >
+            <Component
+              style={
+                Object {
+                  "flex": 1,
+                  "marginTop": 20,
+                  "paddingVertical": 0,
+                }
+              }
+            >
+              <Button
+                accessibilityLabel="submit"
+                onPress={[Function]}
+                title="Submit"
+              />
+            </Component>
+          </Component>,
+        ],
+        "style": Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "allowFontScaling": true,
+            "onChangeText": [Function],
+            "placeholder": "Enter text to display below",
+            "style": Object {
+              "borderColor": "gray",
+              "borderWidth": 1,
+              "height": 40,
+              "marginTop": 20,
+              "padding": 10,
+              "width": 300,
+            },
+            "value": "",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Component
+              style={
+                Object {
+                  "flex": 1,
+                  "marginTop": 20,
+                  "paddingVertical": 0,
+                }
+              }
+            >
+              <Button
+                accessibilityLabel="submit"
+                onPress={[Function]}
+                title="Submit"
+              />
+            </Component>,
+            "style": Object {
+              "flexDirection": "row",
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Button
+                accessibilityLabel="submit"
+                onPress={[Function]}
+                title="Submit"
+              />,
+              "style": Object {
+                "flex": 1,
+                "marginTop": 20,
+                "paddingVertical": 0,
+              },
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessibilityLabel": "submit",
+                "onPress": [Function],
+                "title": "Submit",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

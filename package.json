@@ -14,10 +14,10 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "bundle-android": "mkdir android/app/src/main/assets/; react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "bundle:ios": "node ./node_modules/react-native/local-cli/cli.js bundle --platform ios --entry-file index.js --bundle-output ios/cosmic/main.jsbundle --dev=false --verbose",
     "electron-pack": "build electron-builder -mwl",
     "electron-dev": "concurrently \"cross-env BROWSER=none yarn web\" \"wait-on http://localhost:3000 && electron . --dev\"",
-    "dist": "yarn build && build",
-    "postinstall": "electron-builder install-app-deps"
+    "dist": "yarn build && build"
   },
   "dependencies": {
     "asar": "^0.14.3",
