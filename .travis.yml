@@ -63,16 +63,17 @@ matrix:
     script:
     - cd ios
     - xcodebuild -scheme cosmic -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
-before_deploy:
-  - git config --local user.name "iamonuwa"
-  - git config --local user.email "matrix4u2002@gmail.com"
+notifications:
+  email: matrix4u2002@gmail.com
 deploy:
   provider: releases
   api_key:
-    secure: cu15Ys/rhWL0NjngGG8szXr4u6AllzRiBNRdSNuFv55zC8+rc8F8uwVD1RfCeXK+MbB7RhwKf7d5e4viE/Ec8FZkUs3xMaOBM2uISWIq5E5lDtmqA/TzFAf6u8Z3l3jrNeQR2tskkPn1MT1zdZYYM/7JWhoOYZErXibCaZGJWjN1PZl4yNPLP1Wetf4fQ8Zv6FmLd3iYyGerYQQvc4adbws0lGE8eYCvLCKYMzGtRyDXeU2o79IN82tUpUy7q70c6sxELJdOGUIW/npVjtTVBIhHi48yYYBJW90nRYF74nuh7Hb8xmzzfwQVVefVvIBrTME0M9tKt6Vi/zH9YVXiSMSZ4qvrgO271iVpm4xa/F/S755R/2BZMfYAfBz01YxbzcRzg2qXvEW7KEv3Nr7fnAlXKcrALIy58WmFE1ckEXFPPRws+/yr5YD1EdtSoPf+eRq/EfRYJayxyE84AfAGGYhzwuXB5T+yLcXitvUmOWStgHuLTUR9w1UoU8KoAhXGoEdG8B/JHegGqK6LSVCx79MYy64Hnk2pl9e5PLTPiq451d0BshShNOlu/YlNv5sH720DeM4QH4GoXLQ00/uJe5XRBJEnvidLly7BnWBdXXYFDZq8F8a6iDUPBrWdT5uSo5HxohUhfDilfC/+RQ5nW8JJFZgpKzv2sN9ic4s37GY=
-  file: "$TRAVIS_BUILD_DIR/android/app/build/outputs/apk/app-release.apk"
+    secure: iFkChTW1eGFitgr2UKHjejRhDkAffkAI/UGMoWvpT2EsbCLjybD4mCwTHR81ovika1py2POf0Bs9RtPuzp02736ISdKHoPRa0/o4HA6yySPB5phUiuXzEQo25Ez8RoZUbL84W4EiyxVQQ/rHKVbigIFKLDE8r0s5Wo2RqUXQi4ohDZFPeHuYo4P9C+pGVqrQAMShylS5wABC5Kh3FXZSEuZ9bm9BGb4AIZsUHJdxtm026tK+81SUQfC1JcwAQvjCvG+yP0gMky1p0KK2wL1LLoPNOqKfBs1vRpqiO67KidgwAHwpTBjvvXOcFuYqcmoofwbEdxEn+h5WuwyBfZcfU1px6yFtrztTOa345R0PHjaLcel2ArhAiuKtAlURQgcdafh8OgNwTMAzsgnH6Cn5e8cpG57nbtK67ByVetEaay8rQ0XtryeUEMUmkl8GMfGqKHB5X0hGzFE+0BNnI4Ckeiq3g7R7WTfcRdTjbgmeuR4TZoVLM2Vgc0AkUbB7FKdf3s3+arM7O7aIbkadWMp+XHHc4iNZB0gAYm342jHEyhAiMBCAMYGH+6RV8FK8R5jZ4hBZZBjnVL1qBs9D44gx15tcYoyBQjc6OdMOtnZrXGNvn32HIYi8Uae4cVN1k0sZCRc9YH5dM4B5rc9UEhAoS5LV+E0aDC35p97ELlkJ3F8=
+  file: cosmic/android/app/build/outputs/apk/app-debug.apk
+  file_glob: "true"
   skip_cleanup: true
   on:
-    tags: true
-notifications:
-  email: matrix4u2002@gmail.com
+    branch: master
+    repo: iamonuwa/cosmic
+after_success:
+  - sh ./build-scripts/set_tags.sh
