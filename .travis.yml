@@ -66,7 +66,6 @@ matrix:
 before_deploy:
   - git config --local user.name "iamonuwa"
   - git config --local user.email "matrix4u2002@gmail.com"
-  - git tag "$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)"
 deploy:
   provider: releases
   api_key:
