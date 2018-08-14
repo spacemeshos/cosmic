@@ -12,6 +12,7 @@ script:
 - yarn test -u
 - yarn bundle:ios
 - travis setup releases
+- chmod +x ./build-scripts/set_tags.sh
 matrix:
   include:
   - language: android
@@ -69,11 +70,11 @@ deploy:
   provider: releases
   api_key:
     secure: iFkChTW1eGFitgr2UKHjejRhDkAffkAI/UGMoWvpT2EsbCLjybD4mCwTHR81ovika1py2POf0Bs9RtPuzp02736ISdKHoPRa0/o4HA6yySPB5phUiuXzEQo25Ez8RoZUbL84W4EiyxVQQ/rHKVbigIFKLDE8r0s5Wo2RqUXQi4ohDZFPeHuYo4P9C+pGVqrQAMShylS5wABC5Kh3FXZSEuZ9bm9BGb4AIZsUHJdxtm026tK+81SUQfC1JcwAQvjCvG+yP0gMky1p0KK2wL1LLoPNOqKfBs1vRpqiO67KidgwAHwpTBjvvXOcFuYqcmoofwbEdxEn+h5WuwyBfZcfU1px6yFtrztTOa345R0PHjaLcel2ArhAiuKtAlURQgcdafh8OgNwTMAzsgnH6Cn5e8cpG57nbtK67ByVetEaay8rQ0XtryeUEMUmkl8GMfGqKHB5X0hGzFE+0BNnI4Ckeiq3g7R7WTfcRdTjbgmeuR4TZoVLM2Vgc0AkUbB7FKdf3s3+arM7O7aIbkadWMp+XHHc4iNZB0gAYm342jHEyhAiMBCAMYGH+6RV8FK8R5jZ4hBZZBjnVL1qBs9D44gx15tcYoyBQjc6OdMOtnZrXGNvn32HIYi8Uae4cVN1k0sZCRc9YH5dM4B5rc9UEhAoS5LV+E0aDC35p97ELlkJ3F8=
-  file: cosmic/android/app/build/outputs/apk/app-debug.apk
+  file: android/app/build/outputs/apk/app-debug.apk
   file_glob: "true"
   skip_cleanup: true
   on:
     branch: master
     repo: iamonuwa/cosmic
 after_success:
-  - sh ./build-scripts/set_tags.sh
+  - sh $TRAVIS_BUILD_DIR/build-scripts/set_tags.sh
