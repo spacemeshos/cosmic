@@ -1,0 +1,80 @@
+language: node_js
+node_js:
+- 10.1.0
+sudo: false
+cache:
+  directories:
+  - "$HOME/.yarn-cache"
+  - "$HOME/.gradle/caches/"
+  - "$HOME/.gradle/wrapper/"
+script:
+- travis_retry npm install -g yarn
+- yarn test -u
+- yarn bundle:ios
+- travis setup releases
+- chmod +x ./build-scripts/set_tags.sh
+matrix:
+  include:
+  - language: android
+    os: linux
+    jdk: oraclejdk8
+    before_cache:
+    - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
+    - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
+    sudo: required
+    node_js: false
+    before_install:
+    - nvm install 7
+    - node --version
+    - travis_retry curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key
+      add -
+    - echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+    - travis_retry sudo apt-get update -qq
+    - travis_retry sudo apt-get install -y -qq yarn
+    install:
+    - yarn
+    android:
+      components:
+      - tools
+      - platform-tools
+      - build-tools-23.0.1
+      - android-23
+      - build-tools-26.0.1
+      - android-26
+      - extra-android-m2repository
+      - extra-google-google_play_services
+      - extra-google-m2repository
+      - addon-google_apis-google-16
+    script:
+    - cd android && ./gradlew assembleDebug && ./gradlew assembleRelease
+  - language: objective-c
+    os: osx
+    osx_image: xcode9.4
+    node_js: false
+    before_install:
+    - nvm install 7
+    - node --version
+    - travis_retry npm install -g yarn
+    - yarn -version
+    install:
+    - travis_retry gem install xcpretty
+    - travis_retry yarn
+    xcode_project: ios/cosmic.xcodeproj
+    xcode_scheme: ios/cosmicTests
+    script:
+    - cd ios
+    - xcodebuild -scheme cosmic -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO | xcpretty
+notifications:
+  email: matrix4u2002@gmail.com
+deploy:
+  provider: releases
+  api_key:
+    secure: iFkChTW1eGFitgr2UKHjejRhDkAffkAI/UGMoWvpT2EsbCLjybD4mCwTHR81ovika1py2POf0Bs9RtPuzp02736ISdKHoPRa0/o4HA6yySPB5phUiuXzEQo25Ez8RoZUbL84W4EiyxVQQ/rHKVbigIFKLDE8r0s5Wo2RqUXQi4ohDZFPeHuYo4P9C+pGVqrQAMShylS5wABC5Kh3FXZSEuZ9bm9BGb4AIZsUHJdxtm026tK+81SUQfC1JcwAQvjCvG+yP0gMky1p0KK2wL1LLoPNOqKfBs1vRpqiO67KidgwAHwpTBjvvXOcFuYqcmoofwbEdxEn+h5WuwyBfZcfU1px6yFtrztTOa345R0PHjaLcel2ArhAiuKtAlURQgcdafh8OgNwTMAzsgnH6Cn5e8cpG57nbtK67ByVetEaay8rQ0XtryeUEMUmkl8GMfGqKHB5X0hGzFE+0BNnI4Ckeiq3g7R7WTfcRdTjbgmeuR4TZoVLM2Vgc0AkUbB7FKdf3s3+arM7O7aIbkadWMp+XHHc4iNZB0gAYm342jHEyhAiMBCAMYGH+6RV8FK8R5jZ4hBZZBjnVL1qBs9D44gx15tcYoyBQjc6OdMOtnZrXGNvn32HIYi8Uae4cVN1k0sZCRc9YH5dM4B5rc9UEhAoS5LV+E0aDC35p97ELlkJ3F8=
+  file: android/app/build/outputs/apk/app-debug.apk
+  file_glob: "true"
+  skip_cleanup: true
+  on:
+    branch: master
+    repo: iamonuwa/cosmic
+after_success:
+  - sh $TRAVIS_BUILD_DIR/build-scripts/set_tags.sh

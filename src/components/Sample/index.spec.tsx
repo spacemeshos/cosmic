@@ -2,7 +2,7 @@ import * as React from 'react'
 import { shallow } from 'enzyme'
 import  Sample from './index'
 
-describe("SecondPage", () => {
+describe("Sample", () => {
     const component = shallow(<Sample/>);
 
     it('should match a snapshot', () => {

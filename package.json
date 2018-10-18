@@ -14,10 +14,10 @@
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "bundle-android": "mkdir android/app/src/main/assets/; react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
+    "bundle:ios": "node ./node_modules/react-native/local-cli/cli.js bundle --platform ios --entry-file index.js --bundle-output ios/cosmic/main.jsbundle --dev=false --verbose",
     "electron-pack": "build electron-builder -mwl",
     "electron-dev": "concurrently \"cross-env BROWSER=none yarn web\" \"wait-on http://localhost:3000 && electron . --dev\"",
-    "dist": "yarn build && build",
-    "postinstall": "electron-builder install-app-deps"
+    "dist": "yarn build && build"
   },
   "dependencies": {
     "asar": "^0.14.3",
@@ -49,7 +49,7 @@
     "@types/react-test-renderer": "^16.0.1",
     "@types/redux-logger": "^3.0.6",
     "babel-core": "^6.0.0",
-    "babel-jest": "23.0.1",
+    "babel-jest": "=23.0.1",
     "babel-preset-react-native": "4.0.0",
     "babel-runtime": "^6.23.0",
     "concurrently": "^3.5.1",
@@ -61,7 +61,7 @@
     "electron-icon-maker": "0.0.4",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
-    "jest": "23.1.0",
+    "jest": "=23.1.0",
     "node-gyp": "^3.7.0",
     "prettier": "^1.13.4",
     "react-art": "^16.4.0",

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1534075572586" clover="3.2.0">
+  <project timestamp="1534075572587" name="All files">
+    <metrics statements="55" coveredstatements="52" conditionals="14" coveredconditionals="14" methods="14" coveredmethods="12" elements="83" coveredelements="78" complexity="0" loc="55" ncloc="55" packages="7" files="8" classes="8">
+      <package name="cosmic">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="setupTests.js" path="/home/isaac/apps/opensource/Gitcoin/Spacemesh/cosmic/setupTests.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="4" count="5" type="stmt"/>
+        </file>
+      </package>
+      <package name="cosmic.src.actions">
+        <metrics statements="6" coveredstatements="6" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+        <file name="index.ts" path="/home/isaac/apps/opensource/Gitcoin/Spacemesh/cosmic/src/actions/index.ts">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="1" count="1" type="stmt"/>
+        </file>
+        <file name="input.ts" path="/home/isaac/apps/opensource/Gitcoin/Spacemesh/cosmic/src/actions/input.ts">
+          <metrics statements="5" coveredstatements="5" conditionals="2" coveredconditionals="2" methods="2" coveredmethods="2"/>
+          <line num="3" count="2" type="cond" truecount="2" falsecount="0"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+          <line num="15" count="2" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="cosmic.src.components.FirstPage">
+        <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <file name="index.tsx" path="/home/isaac/apps/opensource/Gitcoin/Spacemesh/cosmic/src/components/FirstPage/index.tsx">
+          <metrics statements="11" coveredstatements="11" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="45" count="1" type="stmt"/>
+          <line num="51" count="1" type="stmt"/>
+          <line num="52" count="1" type="stmt"/>
+          <line num="66" count="1" type="stmt"/>
+          <line num="68" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="cosmic.src.components.Sample">
+        <metrics statements="17" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="3"/>
+        <file name="index.tsx" path="/home/isaac/apps/opensource/Gitcoin/Spacemesh/cosmic/src/components/Sample/index.tsx">
+          <metrics statements="17" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="5" coveredmethods="3"/>
+          <line num="1" count="2" type="stmt"/>
+          <line num="2" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="32" count="2" type="stmt"/>
+          <line num="34" count="1" type="cond" truecount="2" falsecount="0"/>
+          <line num="35" count="1" type="stmt"/>
+          <line num="36" count="1" type="stmt"/>
+          <line num="37" count="1" type="stmt"/>
+          <line num="47" count="2" type="stmt"/>
+          <line num="48" count="0" type="stmt"/>
+          <line num="49" count="0" type="stmt"/>
+          <line num="58" count="2" type="stmt"/>
+          <line num="59" count="0" type="stmt"/>
+          <line num="65" count="2" type="stmt"/>
+          <line num="66" count="1" type="stmt"/>
+          <line num="86" count="2" type="stmt"/>
+          <line num="88" count="2" type="stmt"/>
+        </file>
+      </package>
+      <package name="cosmic.src.components.SecondPage">
+        <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+        <file name="index.tsx" path="/home/isaac/apps/opensource/Gitcoin/Spacemesh/cosmic/src/components/SecondPage/index.tsx">
+          <metrics statements="10" coveredstatements="10" conditionals="2" coveredconditionals="2" methods="3" coveredmethods="3"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="45" count="1" type="stmt"/>
+          <line num="51" count="1" type="stmt"/>
+          <line num="52" count="1" type="stmt"/>
+          <line num="63" count="1" type="stmt"/>
+          <line num="65" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="cosmic.src.reducers">
+        <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+        <file name="input.ts" path="/home/isaac/apps/opensource/Gitcoin/Spacemesh/cosmic/src/reducers/input.ts">
+          <metrics statements="7" coveredstatements="7" conditionals="4" coveredconditionals="4" methods="1" coveredmethods="1"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="19" count="3" type="cond" truecount="2" falsecount="0"/>
+          <line num="20" count="2" type="stmt"/>
+          <line num="22" count="1" type="stmt"/>
+          <line num="23" count="1" type="stmt"/>
+          <line num="30" count="1" type="stmt"/>
+        </file>
+      </package>
+      <package name="cosmic.src.utils.routing">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="index.ios.tsx" path="/home/isaac/apps/opensource/Gitcoin/Spacemesh/cosmic/src/utils/routing/index.ios.tsx">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+          <line num="3" count="2" type="stmt"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="5" count="2" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

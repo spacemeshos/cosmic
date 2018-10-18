@@ -1,0 +1,329 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SecondPage should match a snapshot 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <SecondPage />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "class",
+    "props": Object {
+      "children": Array [
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#000",
+              "fontSize": 15,
+            }
+          }
+        >
+          Welcome to Second Page
+        </Text>,
+        <Component
+          style={
+            Object {
+              "backgroundColor": "#000",
+              "borderRadius": 2,
+              "padding": 10,
+            }
+          }
+        >
+          <Link
+            component={[Function]}
+            replace={false}
+            to="/"
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#fff",
+                }
+              }
+            >
+              Back to Page 1
+            </Text>
+          </Link>
+        </Component>,
+      ],
+      "style": Object {
+        "alignItems": "center",
+        "alignSelf": "center",
+        "display": "flex",
+        "justifyContent": "center",
+        "marginTop": 100,
+      },
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "accessible": true,
+          "allowFontScaling": true,
+          "children": "Welcome to Second Page",
+          "ellipsizeMode": "tail",
+          "style": Object {
+            "color": "#000",
+            "fontSize": 15,
+          },
+        },
+        "ref": null,
+        "rendered": "Welcome to Second Page",
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "class",
+        "props": Object {
+          "children": <Link
+            component={[Function]}
+            replace={false}
+            to="/"
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#fff",
+                }
+              }
+            >
+              Back to Page 1
+            </Text>
+          </Link>,
+          "style": Object {
+            "backgroundColor": "#000",
+            "borderRadius": 2,
+            "padding": 10,
+          },
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              style={
+                Object {
+                  "color": "#fff",
+                }
+              }
+            >
+              Back to Page 1
+            </Text>,
+            "component": [Function],
+            "replace": false,
+            "to": "/",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "accessible": true,
+              "allowFontScaling": true,
+              "children": "Back to Page 1",
+              "ellipsizeMode": "tail",
+              "style": Object {
+                "color": "#fff",
+              },
+            },
+            "ref": null,
+            "rendered": "Back to Page 1",
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+    ],
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "class",
+      "props": Object {
+        "children": Array [
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "#000",
+                "fontSize": 15,
+              }
+            }
+          >
+            Welcome to Second Page
+          </Text>,
+          <Component
+            style={
+              Object {
+                "backgroundColor": "#000",
+                "borderRadius": 2,
+                "padding": 10,
+              }
+            }
+          >
+            <Link
+              component={[Function]}
+              replace={false}
+              to="/"
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#fff",
+                  }
+                }
+              >
+                Back to Page 1
+              </Text>
+            </Link>
+          </Component>,
+        ],
+        "style": Object {
+          "alignItems": "center",
+          "alignSelf": "center",
+          "display": "flex",
+          "justifyContent": "center",
+          "marginTop": 100,
+        },
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "accessible": true,
+            "allowFontScaling": true,
+            "children": "Welcome to Second Page",
+            "ellipsizeMode": "tail",
+            "style": Object {
+              "color": "#000",
+              "fontSize": 15,
+            },
+          },
+          "ref": null,
+          "rendered": "Welcome to Second Page",
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "class",
+          "props": Object {
+            "children": <Link
+              component={[Function]}
+              replace={false}
+              to="/"
+            >
+              <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#fff",
+                  }
+                }
+              >
+                Back to Page 1
+              </Text>
+            </Link>,
+            "style": Object {
+              "backgroundColor": "#000",
+              "borderRadius": 2,
+              "padding": 10,
+            },
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Text
+                accessible={true}
+                allowFontScaling={true}
+                ellipsizeMode="tail"
+                style={
+                  Object {
+                    "color": "#fff",
+                  }
+                }
+              >
+                Back to Page 1
+              </Text>,
+              "component": [Function],
+              "replace": false,
+              "to": "/",
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "accessible": true,
+                "allowFontScaling": true,
+                "children": "Back to Page 1",
+                "ellipsizeMode": "tail",
+                "style": Object {
+                  "color": "#fff",
+                },
+              },
+              "ref": null,
+              "rendered": "Back to Page 1",
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          "type": [Function],
+        },
+      ],
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
