@@ -166,3 +166,7 @@ rm -rf $TMPDIR/haste-map-metro-*
 
 - We are actively looking for contributors, collaborators and maintainers. Get in touch via Gitter.
 - Help wanted - Our Epic first Gitcoin funded issue: https://github.com/spacemeshos/cosmic/issues/2
+
+## Misc cool tools
+- Real-time rendering of react-native-web code in your browser: https://codesandbox.io/s/q4qymyp2l6
+
