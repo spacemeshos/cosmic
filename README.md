@@ -13,7 +13,7 @@ Universal apps are apps which can run on mobile native or on the web inside a we
 A Cosmic app is a mobile / web / desktop app - an app which can run in a web browser, on the desktop across all major desktop platforms and on mobile native on iOS and Android. A cosmic app shares all non presentation code between all platforms and ideally only has platform-specific presentation code for few platform-optimized features. e.g. use FaceId for user authentication when running on iPhone X. But the core idea that 90%+ of presentation code - the UI and layout is shared between all supported runtime platform.
 
 ## A demo Cosmic App
-![](https://raw.githubusercontent.com/spacemeshos/cosmic/master/cosmic_app.png)
+![Cosmic App](./assets/cosmic_app.png)
 Isn't this lovely?
 
 This project aims to be a well designed and maintained seed for a cosmic (native mobile, web, desktop) app based on react native web, redux and typescript.
@@ -45,7 +45,7 @@ We hope that using the seed developers will be able to be more productive in bui
 
 tl'dr - Yes, we are opinionated, very opinionated. We'd like to establish baselines patterns and libraries for cosmic apps. The following diagram outlines the concept:
 
-![](https://raw.githubusercontent.com/spacemeshos/cosmic/master/cosmic_arch.png)
+![Cosmic Arch](./cosmic_arch.png)
 
 -  `React Native Web` for all UI widgets and layout
 
