@@ -57,4 +57,4 @@ buck-out/
 dist/
 
 # Test coverage
-*/coverage/*
+/coverage/
