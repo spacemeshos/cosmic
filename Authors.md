@@ -5,3 +5,4 @@ Cosmic Authors
 - Aviv Eyal <aviveyal07@gmail.com>
 - Omidiora Samuel <samparsky@gmail.com>
 - Onuwa Nnachi Isaac <matrix4u2002@gmail.com>
+- Jeremi Gendron <gendronjeremi@gmail.com>
